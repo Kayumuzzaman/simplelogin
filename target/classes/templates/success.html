@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <title>Login Check</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+    <div th:if="${currentUserEmail != null}">
+        <h1>Login Successful</h1>
+        <p>LoggedIn Email: <span th:text="|${currentUserEmail}|"></span></p>
+        <p><a href="/logout" th:href="@{/logout}">Back to login page</a></p>
+    </div>
+
+    <div th:unless="${currentUserEmail != null}">
+        <h1>Login Error!</h1>
+        <p>
+            Maybe you have entered invalid email or password, please try again!
+            Go back to <a href="/">Login page</a>.
+        </p>
+    </div>
+
+</div>
+</body>
+</html>

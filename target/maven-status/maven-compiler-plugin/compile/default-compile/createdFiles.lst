@@ -1,0 +1,4 @@
+com\dsi\simpleloginsystem\simpleloginsystem\service\UserService.class
+com\dsi\simpleloginsystem\simpleloginsystem\service\UserServiceImpl.class
+com\dsi\simpleloginsystem\simpleloginsystem\model\Key.class
+com\dsi\simpleloginsystem\simpleloginsystem\model\CurrentUser.class

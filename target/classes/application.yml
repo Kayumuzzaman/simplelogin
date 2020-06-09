@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+
+  datasource:
+    url: jdbc:postgresql://ec2-34-198-243-120.compute-1.amazonaws.com:5432/d3ilrob17a49c4
+    username: hyohqpmudttidc
+    password: 226e7f6173155cd861243534b5726364493d2596260f10535c729496df55ac6a
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+      hibernate.generate_statistics: false
+
+logging:
+  level:
+    org.springframework: INFO
+    org.hibername.type: TRACE
+    org.hibernate.state: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd} | %d{HH:mm:ss.SSS} | %-20.20thread | %5p | %cyan(%-25.25logger{25}) | %m%n"
+    file: "%d %p %c{1.} [%t] %m%n"
+  file:
+    name: simplelogin.log
